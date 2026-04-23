@@ -54,7 +54,7 @@
   }
   
   .card-clinical {
-    @apply bg-white rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300;
+    @apply bg-white rounded-xl border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300;
   }
   
   .glass-header {
@@ -79,15 +79,15 @@
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: fadeIn 0.15s ease-out;
 }
 
 .animate-scale-up {
-  animation: scaleUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: scaleUp 0.15s ease-out;
 }
 
 .animate-slide-in-right {
-  animation: slideInRight 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: slideInRight 0.2s ease-out;
 }
 
 .animate-pulse-subtle {

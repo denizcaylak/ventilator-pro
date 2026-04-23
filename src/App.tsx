@@ -26,16 +26,16 @@ export default function App() {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="glass-header border-b border-slate-100/50">
-        <div className="max-w-[1400px] mx-auto px-3 sm:px-4 md:px-8 h-20 sm:h-24 md:h-32 flex items-center justify-between">
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 h-20 sm:h-24 md:h-32 flex items-center justify-between">
           <div className="flex items-center gap-5">
             <div className="bg-secondary/10 p-4 rounded-2xl text-secondary shadow-inner">
               <Activity className="w-10 h-10" />
             </div>
             <div>
-              <h1 className="text-xl sm:text-2xl md:text-4xl font-black text-primary tracking-tight leading-none mb-1">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-primary tracking-tight leading-none mb-1">
                 Ventilator<span className="text-secondary">Pro</span>
               </h1>
-              <p className="text-[10px] sm:text-xs md:text-sm tracking-[0.1em] sm:tracking-[0.15em] font-bold text-slate-400">
+              <p className="text-xs sm:text-sm tracking-[0.1em] sm:tracking-[0.15em] font-bold text-slate-400">
                 {t('app.subtitle')}
               </p>
             </div>
@@ -46,22 +46,22 @@ export default function App() {
         </div>
       </header>
 
-      <main className="max-w-[1400px] mx-auto px-3 sm:px-4 md:px-8 py-6 md:py-12">
+      <main className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 py-6 md:py-12">
         {/* Hero Section / Welcome */}
         <div className="mb-6 sm:mb-8 animate-fade-in">
-          <div className="bg-gradient-to-br from-primary to-slate-800 rounded-2xl md:rounded-[2rem] p-5 md:p-10 text-white relative overflow-hidden shadow-2xl">
+          <div className="bg-gradient-to-br from-primary to-slate-800 rounded-xl md:rounded-2xl p-6 md:p-12 text-white relative overflow-hidden shadow-2xl">
             <div className="absolute top-0 right-0 p-12 opacity-10 pointer-events-none">
               <Activity size={200} />
             </div>
             <div className="relative z-10 max-w-2xl">
-              <h2 className="text-2xl md:text-4xl font-extrabold mb-3 text-balance leading-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold mb-3 text-balance leading-tight">
                 {t('app.title')}
               </h2>
-              <p className="text-base text-white/80 font-medium mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base text-white/80 font-medium mb-6 leading-relaxed">
                 {t('app.subtitle')}
               </p>
               
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/10 flex gap-4 items-start">
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/10 flex gap-4 items-start">
                 <AlertTriangle className="text-amber-400 shrink-0" size={24} />
                 <div>
                   <h4 className="font-bold text-white mb-1">{t('disclaimer.title')}</h4>
@@ -100,7 +100,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-slate-200 py-12 px-4">
+      <footer className="bg-white border-t border-slate-200 py-12 px-6 sm:px-10 lg:px-16">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 text-sm">
           <div className="space-y-4">
             <div className="flex items-center gap-2">

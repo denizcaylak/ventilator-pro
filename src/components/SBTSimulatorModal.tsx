@@ -72,19 +72,19 @@ export default function SBTSimulatorModal({ isOpen, onClose }: SBTSimulatorModal
     <Dialog.Root open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-primary/40 backdrop-blur-sm z-[100] animate-fade-in" />
-        <Dialog.Content className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95vw] max-w-5xl h-[90vh] bg-white rounded-[2.5rem] shadow-[0_32px_64px_-12px_rgba(0,0,0,0.3)] z-[101] overflow-hidden flex flex-col border border-white/20 animate-scale-up">
+        <Dialog.Content className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95vw] max-w-5xl h-[90vh] bg-white rounded-2xl shadow-[0_32px_64px_-12px_rgba(0,0,0,0.3)] z-[101] overflow-y-auto flex flex-col border border-white/20">
           
           {/* Header */}
-          <div className="bg-gradient-to-r from-primary to-slate-800 p-8 text-white flex items-center justify-between relative overflow-hidden">
+          <div className="bg-gradient-to-r from-primary to-slate-800 p-4 sm:p-6 text-white flex items-center justify-between relative overflow-hidden shrink-0">
             <div className="absolute top-0 right-0 p-12 opacity-10 pointer-events-none">
               <Wind size={200} />
             </div>
-            <div className="relative z-10 flex items-center gap-6">
-              <div className="bg-white/10 p-4 rounded-3xl backdrop-blur-md border border-white/20">
-                <Activity className="w-8 h-8 text-secondary" />
+            <div className="relative z-10 flex items-center gap-4">
+              <div className="bg-white/10 p-3 rounded-xl backdrop-blur-md border border-white/20 hidden sm:block">
+                <Activity className="w-6 h-6 text-secondary" />
               </div>
               <div>
-                <Dialog.Title className="text-2xl font-black tracking-tight flex items-center gap-2">
+                <Dialog.Title className="text-lg sm:text-xl font-black tracking-tight flex items-center gap-2">
                   {t('sbtSimulator.title')}
                 </Dialog.Title>
                 <p className="text-white/60 font-bold text-[10px] uppercase tracking-widest mt-1">
@@ -95,13 +95,13 @@ export default function SBTSimulatorModal({ isOpen, onClose }: SBTSimulatorModal
             <button 
               onClick={onClose}
               type="button"
-              className="relative z-10 p-3 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors cursor-pointer border border-white/10"
+              className="relative z-10 p-2 rounded-xl bg-white/5 hover:bg-white/10 transition-colors cursor-pointer border border-white/10"
             >
-              <X size={24} />
+              <X size={20} />
             </button>
           </div>
 
-          <div className="flex-1 overflow-y-auto p-8 lg:p-12 space-y-12">
+          <div className="p-4 sm:p-8 space-y-8 sm:space-y-12">
             
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
               
@@ -121,9 +121,9 @@ export default function SBTSimulatorModal({ isOpen, onClose }: SBTSimulatorModal
                         onClick={() => setSelectedMethod(m)}
                         type="button"
                         className={cn(
-                          "flex flex-col items-start p-6 rounded-3xl border-2 transition-all text-left group relative overflow-hidden h-full cursor-pointer",
+                          "flex flex-col items-start p-4 sm:p-5 rounded-xl border-2 transition-all text-left group relative overflow-hidden h-full cursor-pointer",
                           selectedMethod === m 
-                            ? "bg-secondary/5 border-secondary shadow-lg shadow-secondary/5" 
+                            ? "bg-secondary/5 border-secondary shadow-md shadow-secondary/5" 
                             : "bg-white border-slate-100 hover:border-slate-200"
                         )}
                       >
@@ -175,17 +175,17 @@ export default function SBTSimulatorModal({ isOpen, onClose }: SBTSimulatorModal
 
               {/* Right Column: Timer & Controls */}
               <div className="lg:col-span-5">
-                <div className="sticky top-0 space-y-8">
+                <div className="space-y-6 sm:space-y-8">
                   {/* Timer Card */}
-                  <div className="bg-primary rounded-[2.5rem] p-10 text-white shadow-2xl shadow-primary/40 relative overflow-hidden group">
-                    <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:rotate-12 transition-transform duration-700">
-                      <Timer size={120} />
+                  <div className="bg-primary rounded-xl p-6 sm:p-8 text-white shadow-xl shadow-primary/30 relative overflow-hidden group">
+                    <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:rotate-12 transition-transform duration-700 pointer-events-none">
+                      <Timer size={100} />
                     </div>
                     <div className="relative z-10 flex flex-col items-center">
-                      <div className="font-black text-white/40 uppercase tracking-[0.2em] text-[10px] mb-6">
+                      <div className="font-black text-white/50 uppercase tracking-[0.15em] text-[10px] mb-4">
                         {t('sbtSimulator.timerTitle')}
                       </div>
-                      <div className="text-8xl font-black tabular-nums tracking-tighter mb-8 group-hover:scale-105 transition-transform duration-500">
+                      <div className="text-6xl sm:text-7xl font-black tabular-nums tracking-tighter mb-6 group-hover:scale-105 transition-transform duration-500">
                         {formatTime(timer)}
                       </div>
                       
@@ -194,10 +194,10 @@ export default function SBTSimulatorModal({ isOpen, onClose }: SBTSimulatorModal
                           onClick={() => setIsTimerRunning(!isTimerRunning)}
                           type="button"
                           className={cn(
-                            "flex-1 py-5 rounded-2xl font-black flex items-center justify-center gap-3 transition-all cursor-pointer shadow-lg active:scale-95",
+                            "flex-1 py-4 rounded-xl font-black flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md active:scale-95 text-sm sm:text-base",
                             isTimerRunning 
-                              ? "bg-rose-500 hover:bg-rose-600 shadow-rose-900/40" 
-                              : "bg-secondary hover:bg-secondary-dark shadow-secondary-dark/40"
+                              ? "bg-rose-500 hover:bg-rose-600 shadow-rose-900/30" 
+                              : "bg-secondary hover:bg-secondary-dark shadow-secondary-dark/30"
                           )}
                         >
                           {isTimerRunning ? <Pause size={20} /> : <Play size={20} />}
@@ -206,7 +206,7 @@ export default function SBTSimulatorModal({ isOpen, onClose }: SBTSimulatorModal
                         <button 
                           onClick={() => { setTimer(0); setIsTimerRunning(false); }}
                           type="button"
-                          className="bg-white/10 hover:bg-white/20 p-5 rounded-2xl transition-all cursor-pointer border border-white/10 active:scale-95"
+                          className="bg-white/10 hover:bg-white/20 p-4 rounded-xl transition-all cursor-pointer border border-white/10 active:scale-95"
                         >
                           <RotateCcw size={20} />
                         </button>
@@ -227,9 +227,10 @@ export default function SBTSimulatorModal({ isOpen, onClose }: SBTSimulatorModal
                   <button
                     onClick={handleEvaluate}
                     type="button"
-                    className="w-full bg-white text-primary border-2 border-primary font-black py-6 rounded-[2.5rem] hover:bg-primary hover:text-white transition-all duration-500 flex items-center justify-center gap-4 text-lg shadow-xl shadow-slate-200 cursor-pointer active:scale-[0.98]"
+                    className="w-full bg-white text-primary border-2 border-primary font-black py-4 sm:py-5 rounded-xl hover:bg-primary hover:text-white transition-all duration-300 flex items-center justify-center gap-3 text-base sm:text-lg shadow-md shadow-slate-200 cursor-pointer active:scale-[0.98]"
                   >
-                    <BarChart3 size={24} /> {t('buttons.evaluateSBT')}
+                    <BarChart3 size={20} className="shrink-0" /> 
+                    <span>{t('buttons.evaluateSBT')}</span>
                   </button>
                 </div>
               </div>
@@ -237,13 +238,13 @@ export default function SBTSimulatorModal({ isOpen, onClose }: SBTSimulatorModal
 
             {/* Result Display Overlay */}
             {result && (
-              <div className="animate-fade-in pt-12 border-t border-slate-200">
+              <div className="animate-fade-in pt-8 border-t border-slate-200">
                 <div className={cn(
-                  "rounded-[2.5rem] p-12 border-2 flex flex-col md:flex-row items-center gap-10 shadow-2xl",
+                  "rounded-2xl p-6 sm:p-10 border-2 flex flex-col md:flex-row items-center gap-6 shadow-xl",
                   result.success ? "bg-emerald-50 border-emerald-200" : "bg-rose-50 border-rose-200"
                 )}>
                   <div className={cn(
-                    "p-8 rounded-[2rem] text-white shadow-xl",
+                    "p-6 rounded-xl text-white shadow-md",
                     result.success ? "bg-emerald-500" : "bg-rose-500"
                   )}>
                     {result.success ? <CheckCircle2 size={48} /> : <AlertCircle size={48} />}
