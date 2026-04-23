@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Ventilator Pro</string>
+    <string name="title_activity_main">Ventilator Pro</string>
+    <string name="package_name">com.ventilatorpro.app</string>
+    <string name="custom_url_scheme">com.ventilatorpro.app</string>
+</resources>

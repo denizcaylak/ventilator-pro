@@ -1,0 +1,25 @@
+# Project Environment Requirements
+
+Project: Ventilator Support Pro
+Tech Stack: React + Vite + TypeScript
+
+System Requirements:
+--------------------
+Node.js >= 18.0.0
+npm >= 9.0.0
+
+Key Dependencies:
+-----------------
+react >= 19.0.0
+lucide-react >= 0.475.0
+i18next >= 26.0.0
+tailwindcss >= 4.0.0
+@radix-ui/react-dialog >= 1.1.0
+
+Installation Command:
+---------------------
+npm install
+
+Run Command:
+------------
+npm run dev

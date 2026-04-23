@@ -1,0 +1,443 @@
+{
+  "app": {
+    "title": "Ventilator Support Pro",
+    "subtitle": "Akıllı Karar Destek, Weaning ve SBT Sistemi",
+    "author": "Dr.Feridun Karadağ",
+    "offlineBadge": "Offline Mod Aktif",
+    "installBanner": "Bu uygulamayı ana ekranınıza ekleyin!",
+    "installButton": "Şimdi Ekle",
+    "copyright": "© 2026 Dr.Feridun Karadağ | Tüm hakları saklıdır.",
+    "sbtReference": "SBT protokolleri: JAMA Network Open 2024; Burns KEA et al."
+  },
+  "disclaimer": {
+    "title": "Tıbbi Sorumluluk Reddi",
+    "text": "Bu uygulama <strong>karar destek amaçlıdır</strong>. Tüm klinik kararlar hekimin değerlendirmesiyle verilmelidir. Dr.Feridun Karadağ ve geliştiriciler hiçbir sorumluluk kabul etmez.",
+    "footerTitle": "YASAL UYARI",
+    "footerText": "Bu uygulama <strong>karar destek amaçlıdır</strong>. Tüm klinik kararlar hekimin değerlendirmesiyle verilmelidir. Dr.Feridun Karadağ ve geliştiriciler hiçbir sorumluluk kabul etmez."
+  },
+  "tabs": {
+    "newPatient": "Yeni Hasta",
+    "ventilatedPatient": "Ventilatördeki Hasta",
+    "sbtGuide": "SBT Rehberi"
+  },
+  "patientType": {
+    "selectTitle": "Hasta Popülasyonunu Seçin",
+    "adult": "Erişkin (≥18 yaş)",
+    "pediatric": "Pediatrik (<18 yaş)",
+    "pediatricActive": "Pediatrik Mod Aktif",
+    "pediatricDescription": "Otomatik olarak pediatrik referans değerleri ve hesaplamalar kullanılacaktır. VT hesaplaması 4-6 ml/kg (IDEAL kilo), PEEP ve basınç limitleri yaşa göre ayarlanacaktır.",
+    "pediatricBadge": "PEDİATRİK",
+    "pediatricWeaningTitle": "Pediatrik Weaning Modu",
+    "pediatricWeaningDescription": "Pediatrik weaning kriterleri ve referans değerleri kullanılmaktadır. SBT süreleri, RSBI eşikleri ve ekstübasyon kriterleri yaşa özgüdür."
+  },
+  "demographics": {
+    "title": "Demografik Bilgiler",
+    "age": "Yaş",
+    "ageUnit": "yıl / ay (0-2 yaş için ay olarak girin)",
+    "weight": "Kilo",
+    "weightUnit": "kg",
+    "height": "Boy",
+    "heightUnit": "cm",
+    "gender": "Cinsiyet",
+    "male": "Erkek",
+    "female": "Kadın",
+    "ibw": "İdeal Vücut Ağırlığı (IBW)",
+    "bsa": "Vücut Yüzey Alanı (BSA)",
+    "ageCategory": "Yaş Kategorisi"
+  },
+  "ageCategories": {
+    "newborn": "Yenidoğan (0-28 gün)",
+    "infant": "Süt çocuğu (1-12 ay)",
+    "earlyChildhood": "Erken çocukluk (1-5 yaş)",
+    "schoolAge": "Okul çağı (6-11 yaş)",
+    "adolescent": "Adolesan (12-17 yaş)"
+  },
+  "abg": {
+    "title": "Arteriyel Kan Gazı",
+    "ph": "pH",
+    "phNormal": "Normal: 7.35-7.45",
+    "phNormalPediatric": "Normal: 7.35-7.45 (tüm yaşlar)",
+    "paco2": "PaCO₂",
+    "paco2Normal": "mmHg (35-45)",
+    "paco2NormalPediatric": "mmHg (30-35 yenidoğan, 35-45 çocuk)",
+    "pao2": "PaO₂",
+    "pao2Normal": "mmHg (80-100)",
+    "pao2NormalPediatric": "mmHg (60-90 yenidoğan, 80-100 çocuk)",
+    "hco3": "HCO₃⁻",
+    "hco3Normal": "mEq/L (22-26)",
+    "hco3NormalPediatric": "mEq/L (16-24 yenidoğan, 20-26 çocuk)",
+    "sao2": "SaO₂",
+    "sao2Normal": "% (>95)",
+    "be": "Base Excess",
+    "beNormal": "mEq/L (-2 to +2)"
+  },
+  "lab": {
+    "title": "Laboratuvar",
+    "hemoglobin": "Hemoglobin",
+    "hbNormal": "g/dL (E:13.5-17.5, K:12.0-16.0)",
+    "hematocrit": "Hematokrit",
+    "hctUnit": "%",
+    "creatinine": "Kreatinin",
+    "creatinineUnit": "mg/dL",
+    "bun": "Üre (BUN)",
+    "bunUnit": "mg/dL",
+    "ast": "AST",
+    "astUnit": "U/L",
+    "alt": "ALT",
+    "altUnit": "U/L",
+    "albumin": "Albumin",
+    "albuminNormal": "g/dL (3.5-5.0)",
+    "lactate": "Laktat",
+    "lactateNormal": "mmol/L (<2.0)"
+  },
+  "comorbidities": {
+    "title": "Ek Hastalıklar & Durumlar",
+    "copd": "KOAH",
+    "asthma": "Astım",
+    "ards": "ARDS",
+    "chf": "Kalp Yetmezliği",
+    "ckd": "Kronik Böbrek Hastalığı",
+    "cirrhosis": "Karaciğer Sirozu",
+    "diabetes": "Diabetes Mellitus",
+    "immunosuppression": "İmmunosüpresyon",
+    "neuromuscular": "Nöromusküler Hastalık",
+    "obesity": "Obezite (BMI >30)",
+    "pregnancy": "Gebelik",
+    "smoking": "Sigara Öyküsü"
+  },
+  "lung": {
+    "title": "Akciğer Durumu",
+    "pfRatio": "PAO₂/FiO₂ Oranı",
+    "pfRatioUnit": "mmHg",
+    "peep": "PEEP (varsa)",
+    "peepUnit": "cmH₂O",
+    "allergy": "Bilinen Alerji",
+    "allergyPlaceholder": "Yoksa boş bırakın",
+    "pneumonia": "Pnömoni",
+    "pulmonaryEdema": "Akciğer Ödemi",
+    "pneumothorax": "Pnömotoraks",
+    "pleuralEffusion": "Plevral Efüzyon",
+    "atelectasis": "Atelektazi"
+  },
+  "buttons": {
+    "analyzeNew": "Kapsamlı Analiz ve Ventilatör Önerisi Al",
+    "analyzeWeaning": "Weaning Analizi ve Öneri Al",
+    "evaluateSBT": "SBT Sonucunu Değerlendir",
+    "openSBTSimulator": "İnteraktif SBT Simülatörünü Aç"
+  },
+  "weaning": {
+    "paramsTitle": "Weaning Parametreleri",
+    "ventDay": "Ventilatör Günü",
+    "ventDayUnit": "gün",
+    "currentMode": "Mevcut Mod",
+    "modes": {
+      "simv": "SIMV",
+      "acv": "ACV/VCV",
+      "pcv": "PCV",
+      "psv": "PSV",
+      "cpap": "CPAP",
+      "bipap": "BiPAP",
+      "aprv": "APRV"
+    },
+    "fio2": "FiO₂",
+    "fio2Unit": "%",
+    "peep": "PEEP",
+    "peepUnit": "cmH₂O",
+    "ps": "PS (Pressure Support)",
+    "psUnit": "cmH₂O",
+    "respRate": "Respiratuvar Frekans",
+    "respRateUnit": "/dk",
+    "spontVt": "Spontane VT",
+    "spontVtUnit": "ml",
+    "rsbi": "RSBI (Rapid Shallow)",
+    "rsbiNormal": "breaths/L/min (<105)",
+    "rsbiNormalPediatric": "breaths/L/min (<8-12 pediatrik)",
+    "criteriaTitle": "Weaning Kriterleri",
+    "criteria": {
+      "stable": "Hemodinamik Stabilite",
+      "fever": "Ateşsiz (<38°C)",
+      "infection": "Enfeksiyon Kontrolü",
+      "secret": "Sekret Yönetimi İyi",
+      "cough": "Öksürük Refleksi Güçlü",
+      "gag": "Gag Refleksi Var",
+      "conscious": "Uyanık ve Kooperatif",
+      "acidosis": "Asidoz Yok (pH >7.35)",
+      "lactate": "Laktat Normal (<2)",
+      "sedation": "Sedasyon Azaltıldı"
+    },
+    "akgTitle": "Son AKG (Weaning)",
+    "complicationsTitle": "Mevcut Komplikasyonlar",
+    "complications": {
+      "vap": "VAP",
+      "barotrauma": "Barotravma",
+      "delirium": "Deliryum",
+      "weakness": "ICU-Acquired Weakness",
+      "tracheal": "Trakeal Hasar",
+      "sepsis": "Sepsis/Septik Şok"
+    }
+  },
+  "sbtGuide": {
+    "title": "SBT (Spontaneous Breathing Trial) Rehberi",
+    "subtitle": "Spontane Solunum Denemesi - Mekanik ventilatörden ayırma öncesi değerlendirme",
+    "comparisonTitle": "SBT Yöntemleri Karşılaştırması",
+    "comparisonHeaders": {
+      "method": "Yöntem",
+      "description": "Açıklama",
+      "adultParams": "Erişkin Parametreler",
+      "pediatricParams": "Pediatrik Parametreler",
+      "difficulty": "Zorluk"
+    },
+    "methods": {
+      "ttube": {
+        "name": "T-Tube (T-Piece)",
+        "description": "Ventilatörden tam ayırma, oksijen ile nemlendirme",
+        "adultParams": "O₂ flow: 10-15 L/dk",
+        "pediatricParams": "O₂ flow: 1-2 L/kg/dk",
+        "difficulty": "Yüksek",
+        "shortDesc": "Tam spontane solunum\nO₂ nemlendirilmiş"
+      },
+      "ps": {
+        "name": "Low Pressure Support (PS)",
+        "description": "ET tüp direncini telafi eden destek",
+        "adultParams": "PS: 5-8 cmH₂O\nPEEP: 5 cmH₂O",
+        "pediatricParams": "PS: 5-8 cmH₂O\nPEEP: 3-5 cmH₂O",
+        "difficulty": "Düşük",
+        "shortDesc": "PS: 5-8 cmH₂O\nPEEP: 5 cmH₂O"
+      },
+      "cpap": {
+        "name": "CPAP",
+        "description": "Sürekli pozitif hava yolu basıncı",
+        "adultParams": "CPAP: 5 cmH₂O",
+        "pediatricParams": "CPAP: 3-5 cmH₂O",
+        "difficulty": "Orta",
+        "shortDesc": "CPAP: 5 cmH₂O\nTüp direnci telafi edilmez"
+      },
+      "atc": {
+        "name": "ATC (Automatic Tube Compensation)",
+        "description": "Otomatik tüp direnci telafisi",
+        "adultParams": "ATC: %100\nPEEP: 5 cmH₂O",
+        "pediatricParams": "ATC: %100\nPEEP: 3-5 cmH₂O",
+        "difficulty": "Düşük",
+        "shortDesc": "ATC: %100\nPEEP: 5 cmH₂O"
+      }
+    },
+    "evidenceNote": "Evidence-Based Öneri: 2024 JAMA Network Open meta-analizine göre, PS (5-8 cmH₂O) ile yapılan SBT'ler T-tube'a göre %7 daha başarılı ekstübasyon sağlar (RR: 1.07, 95% CI: 1.04-1.10) ve reintübasyon riskini artırmaz. ATC+CPAP ise PS'ye göre daha yüksek ekstübasyon başarısı göstermiştir (RR: 1.10, 95% CI: 1.00-1.21).",
+    "successTitle": "SBT Başarı Kriterleri",
+    "adultCriteriaTitle": "Erişkin Kriterleri (30-120 dk)",
+    "adultCriteria": [
+      "SpO₂ > %90 (veya PaO₂ > 60 mmHg)",
+      "PaCO₂ artışı < 10 mmHg veya pH > 7.32",
+      "Solunum frekansı < 35/dk",
+      "RSBI (f/VT) < 105",
+      "Kalp hızı < 140 veya <%20 artış",
+      "Sistolik TA: 90-180 mmHg",
+      "Bilinç durumu stabil",
+      "Terleme, dispne, retraksiyon yok"
+    ],
+    "pediatricCriteriaTitle": "Pediatrik Kriterleri (30-60 dk)",
+    "pediatricCriteria": [
+      "SpO₂ > %92",
+      "Solunum frekansı yaşa uygun (genellikle < 50/dk)",
+      "RSBI: < 8-10 (yenidoğan), < 10-12 (çocuk)",
+      "Kalp hızı artışı <%20",
+      "Hemodinamik stabilite",
+      "Göğüs duvarı retraksiyonu yok",
+      "Agitasyon, terleme yok"
+    ],
+    "failureTitle": "SBT Başarısızlık Belirtileri",
+    "immediateStopTitle": "Hemen Durdurma Kriterleri:",
+    "immediateStopCriteria": [
+      "SpO₂ düşüşü <%90 (erişkin) / <%92 (pediatrik)",
+      "PaCO₂ artışı > 10 mmHg veya pH < 7.32",
+      "Solunum frekansı > 35/dk (erişkin) veya yaşa göre yüksek",
+      "Kalp hızı > 140 veya <%20 artış",
+      "Sistolik TA > 180 veya < 90 mmHg",
+      "Agitasyon, şiddetli terleme",
+      "Göğüs duvarı retraksiyonu (pediatrik)",
+      "Bilinç durumu bozulması"
+    ],
+    "afterFailureTitle": "⚠️ Başarısızlık Sonrası:",
+    "afterFailureCriteria": [
+      "Ventilatör desteğine geri dön",
+      "24 saat sonra tekrar değerlendir",
+      "Başarısızlık nedenini araştır (sekret, bronkospazm, zayıf solunum kasları)",
+      "Sedasyon minimizasyonu, beslenme optimizasyonu"
+    ],
+    "flowTitle": "SBT Süreç Akış Şeması",
+    "flowSteps": [
+      {
+        "title": "Hazırlık",
+        "description": "Weaning kriterleri kontrolü\nSedasyon azaltma\nPreoxygenasyon"
+      },
+      {
+        "title": "Yöntem Seçimi",
+        "description": "PS 5-8 cmH₂O (önerilen)\nveya T-tube\nveya ATC+CPAP"
+      },
+      {
+        "title": "SBT Başlat",
+        "description": "30 dk (min)\nErişkin: 30-120 dk\nPediatrik: 30-60 dk"
+      },
+      {
+        "title": "Değerlendirme",
+        "description": "Klinik + AKG\nBaşarı/Başarısız\nKarar: Ekstübasyon?"
+      },
+      {
+        "title": "Sonuç",
+        "description": "Başarılı → Ekstübasyon\nBaşarısız → 24h sonra tekrar\nNIV proflaksi değerlendir"
+      }
+    ]
+  },
+  "sbtSimulator": {
+    "title": "SBT (Spontaneous Breathing Trial) Simülatörü",
+    "patientPopulation": "Hasta Popülasyonu:",
+    "adultLabel": "Erişkin",
+    "pediatricLabel": "Pediatrik",
+    "methodSelectTitle": "1. SBT Yöntemi Seçin",
+    "difficultyLabels": {
+      "easy": "Kolay",
+      "medium": "Orta",
+      "hard": "Zorlayıcı"
+    },
+    "paramsTitle": "2. SBT Parametreleri",
+    "age": "Yaş",
+    "weight": "Kilo (kg)",
+    "spo2Start": "SpO₂ Başlangıç (%)",
+    "respRate": "Solunum Frekansı (/dk)",
+    "checklistTitle": "SBT Başlangıç Kontrol Listesi",
+    "checklist": {
+      "stable": "Hemodinamik stabilite",
+      "fio2": "FiO₂ ≤ %40-50",
+      "peep": "PEEP ≤ 5-8 cmH₂O",
+      "cough": "Öksürük refleksi güçlü",
+      "gag": "Gag refleksi var",
+      "conscious": "Uyanık ve kooperatif",
+      "secret": "Sekret yönetimi yeterli",
+      "acidosis": "Asidoz yok (pH > 7.35)"
+    },
+    "timerTitle": "SBT Süresi",
+    "timerStart": "Başlat",
+    "timerPause": "Durdur",
+    "timerReset": "Sıfırla",
+    "recommendedDurationAdult": "30-120 dk (Erişkin)",
+    "recommendedDurationPediatric": "30-60 dk (Pediatrik)",
+    "recommendedDurationLabel": "Önerilen süre:",
+    "launchButton": "SBT Simülatörünü Başlat"
+  },
+  "results": {
+    "riskFactorsTitle": "Risk Faktörleri",
+    "lowRisk": "Düşük Risk",
+    "mediumRisk": "Orta Risk",
+    "highRisk": "Yüksek Risk",
+    "idealWeight": "İdeal Kilo",
+    "bmi": "BMI",
+    "bsa": "BSA",
+    "eGFR": "eGFR",
+    "firstChoice": "Birinci Seçenek",
+    "alternative": "Alternatif",
+    "recommendedModes": "Önerilen Modlar",
+    "invasive": "İnvaziv Mekanik Ventilasyon",
+    "niv": "Non-İnvaziv Ventilasyon",
+    "conservative": "Konservatif Tedavi",
+    "weaningReady": "Weaning'e Hazır - SBT Başlatılabilir",
+    "weaningCaution": "Dikkatli Weaning - SBT Hazırlığı",
+    "weaningWait": "Weaning Erken - SBT İçin Bekle",
+    "weanScore": "Weaning Skoru",
+    "criteriaMetLabel": "Karşılanan Kriterler",
+    "ventilatorDay": "Ventilatör Günü",
+    "parametersTitle": "Weaning Parametreleri",
+    "suggestionsTitle": "Öneriler",
+    "sbtReadyTitle": "SBT (Spontaneous Breathing Trial) Başlatmaya Hazır",
+    "sbtReadyDescription": "Hasta SBT için uygun. Önerilen süre:",
+    "sbtReadyNote": "PS 5-8 cmH₂O veya T-tube yöntemi kullanılabilir.",
+    "sbtSuccess": "SBT BAŞARILI",
+    "sbtFail": "SBT BAŞARISIZ / ERKEN DURDURMA GEREKLİ",
+    "successCriteriaMet": "Başarı Kriterleri Sağlandı:",
+    "detectedIssues": "Tespit Edilen Sorunlar:",
+    "sbtSuccessRecommendations": [
+      "Ekstübasyon değerlendirilebilir",
+      "Yutma fonksiyonu ve öksürük refleksi kontrol edilmeli",
+      "Yüksek riskli hastada NIV proflaksi düşünülebilir",
+      "Ekstübasyon sonrası yakın izlem planlanmalı"
+    ],
+    "sbtFailRecommendations": [
+      "Ventilatör desteğine geri dönün",
+      "Altta yatan nedeni tedavi edin (sekret, bronkospazm, vb.)",
+      "Sedasyon minimizasyonu ve beslenme optimizasyonu",
+      "24 saat sonra tekrar SBT değerlendirmesi planlayın",
+      "Güçlendirme egzersizleri ve rehabilitasyon"
+    ],
+    "methodUsed": "Kullanılan Yöntem:",
+    "duration": "Süre:",
+    "population": "Popülasyon:",
+    "sbtRecommendationsTitle": "Öneriler:",
+    "sbtActionsTitle": "Yapılması Gerekenler:"
+  },
+  "riskFactors": {
+    "advancedAge": "İleri yaş (>65)",
+    "veryAdvancedAge": "Çok ileri yaş (>80)",
+    "newborn": "Yenidoğan (yüksek risk)",
+    "infant": "Süt çocuğu",
+    "renalFailure": "Böbrek yetmezliği (eGFR <60)",
+    "highCreatininePediatric": "Yüksek kreatinin (pediatrik)",
+    "hypoalbuminemia": "Hipoalbuminemi",
+    "liverEnzymeElevation": "Karaciğer enzim yüksekliği",
+    "anemia": "Anemi",
+    "severeAcidosis": "Şiddetli asidoz",
+    "severeLacticAcidosis": "Şiddetli laktik asidoz",
+    "mildLacticAcidosis": "Hafif laktik asidoz",
+    "ckd": "KBH",
+    "dm": "DM",
+    "obesityRisk": "Obezite"
+  },
+  "abgInterpretation": {
+    "respiratoryAcidosis": "Respiratuvar Asidoz",
+    "respiratoryAlkalosis": "Respiratuvar Alkaloz",
+    "metabolicAcidosis": "Metabolik Asidoz",
+    "metabolicAlkalosis": "Metabolik Alkaloz",
+    "severeHypoxemia": "Şiddetli Hipoksemi",
+    "hypoxemia": "Hipoksemi"
+  },
+  "ventModes": {
+    "pcvVg": "PCV-VG (Hacim Garantili)",
+    "prvcPcvVg": "PRVC/PCV-VG",
+    "pcv": "PCV",
+    "bipapST": "BiPAP S/T",
+    "cpapBipapPediatric": "CPAP/BiPAP (Pediatrik maskesi)",
+    "hfnc": "High Flow Nasal Cannula",
+    "nasalCannula": "Nazal Kanül/O2 tent",
+    "pcvLongExhale": "PCV + Uzun Ekshale",
+    "lungProtective": "Lung protective strategy",
+    "pressureControlled": "Basınç kontrollü ventilasyon",
+    "niv": "Non-invaziv ventilasyon",
+    "conservativeO2": "Konservatif oksijen desteği",
+    "obstructionManagement": "Obstrüksiyon yönetimi",
+    "bronchodilatorRequired": "Gerekli"
+  },
+  "weaningRecommendations": {
+    "startSBT": "SBT başlat",
+    "methodPS": "Yöntem: PS 5-8 cmH₂O (önerilen) veya T-tube",
+    "extubationEval": "ise ekstübasyon değerlendir",
+    "swallowCheck": "Yutma fonksiyonu ve öksürük refleksi kontrol edilmeli",
+    "nivProphylaxis": "Yüksek riskli hastada NIV proflaksi düşünülebilir",
+    "dailySBT": "Günlük SBT denemeleri planlanmalı",
+    "psvReduction": "PSV kademeli azaltma (günlük 2-3 cmH₂O)",
+    "rehabilitation": "Güçlendirme egzersizleri ve rehabilitasyon",
+    "sedationMinimization": "Sedasyon minimizasyonu",
+    "underlyingCause": "Altta yatan neden tedavisi (enfeksiyon, ödem vb.)",
+    "dailyAwakening": "Sedasyon minimizasyonu (günlük uyandırma protokolü)",
+    "nutritionOptimization": "Beslenme optimizasyonu (hedef: 25-30 kcal/kg/gün)",
+    "respiratoryStrengthening": "Solunum kası güçlendirme",
+    "prolongedMV": "⚠️ Prolonged MV - Trakeostomi değerlendir",
+    "pediatricConsult": "pediatrik konsültasyon şart"
+  },
+  "validation": {
+    "requiredFields": "Lütfen yaş, kilo ve boy değerlerini girin!",
+    "requiredABG": "Lütfen pH, PaCO₂ ve PaO₂ değerlerini girin!",
+    "requiredAgeWeight": "Lütfen yaş ve kilo değerlerini girin!",
+    "requiredVentDay": "Lütfen ventilatör gününü girin!"
+  },
+  "language": {
+    "tr": "Türkçe",
+    "en": "English"
+  }
+}
