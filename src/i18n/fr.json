@@ -1,0 +1,448 @@
+{
+  "app": {
+    "title": "Ventilator Support Pro",
+    "subtitle": "Système intelligent d'aide à la décision, de sevrage et de SBT",
+    "author": "Dr. Feridun Karadağ",
+    "offlineBadge": "Mode hors ligne actif",
+    "installBanner": "Ajoutez cette application à votre écran d'accueil !",
+    "installButton": "Ajouter",
+    "copyright": "© 2026 Dr. Feridun Karadağ | Tous droits réservés.",
+    "sbtReference": "Protocoles SBT : JAMA Network Open 2024; Burns KEA et al."
+  },
+  "disclaimer": {
+    "title": "Avis de non-responsabilité médicale",
+    "text": "Cette application est <strong>uniquement destinée à l'aide à la décision</strong>. Toutes les décisions cliniques doivent être prises par le médecin traitant. Le Dr Feridun Karadağ et les développeurs déclinent toute responsabilité.",
+    "footerTitle": "AVERTISSEMENT LÉGAL",
+    "footerText": "Cette application est <strong>uniquement destinée à l'aide à la décision</strong>. Toutes les décisions cliniques doivent être prises par le médecin traitant. Le Dr Feridun Karadağ et les développeurs déclinent toute responsabilité."
+  },
+  "tabs": {
+    "newPatient": "Nouveau patient",
+    "ventilatedPatient": "Patient ventilé",
+    "sbtGuide": "Guide SBT"
+  },
+  "patientType": {
+    "selectTitle": "Sélectionner la population de patients",
+    "adult": "Adulte (≥18 ans)",
+    "pediatric": "Pédiatrique (<18 ans)",
+    "pediatricActive": "Mode pédiatrique actif",
+    "pediatricDescription": "Les valeurs de référence et calculs pédiatriques seront utilisés automatiquement. Calcul du VT 4-6 ml/kg (poids IDÉAL), PEEP et limites de pression ajustés selon l'âge.",
+    "pediatricBadge": "PÉDIATRIQUE",
+    "pediatricWeaningTitle": "Mode de sevrage pédiatrique",
+    "pediatricWeaningDescription": "Les critères de sevrage et les valeurs de référence pédiatriques sont utilisés. Les durées de SBT, les seuils RSBI et les critères d'extubation sont spécifiques à l'âge."
+  },
+  "demographics": {
+    "title": "Données démographiques",
+    "age": "Âge",
+    "ageUnit": "ans / mois (entrez en mois pour 0-2 ans)",
+    "weight": "Poids",
+    "weightUnit": "kg",
+    "height": "Taille",
+    "heightUnit": "cm",
+    "gender": "Genre",
+    "male": "Homme",
+    "female": "Femme",
+    "ibw": "Poids corporel idéal (PCI)",
+    "bsa": "Surface corporelle (SC)",
+    "ageCategory": "Catégorie d'âge"
+  },
+  "ageCategories": {
+    "newborn": "Nouveau-né (0-28 jours)",
+    "infant": "Nourrisson (1-12 mois)",
+    "earlyChildhood": "Petite enfance (1-5 ans)",
+    "schoolAge": "Âge scolaire (6-11 ans)",
+    "adolescent": "Adolescent (12-17 ans)"
+  },
+  "abg": {
+    "title": "Gazométrie artérielle",
+    "ph": "pH",
+    "phNormal": "Normal : 7.35-7.45",
+    "phNormalPediatric": "Normal : 7.35-7.45 (tous âges)",
+    "paco2": "PaCO₂",
+    "paco2Normal": "mmHg (35-45)",
+    "paco2NormalPediatric": "mmHg (30-35 nouveau-né, 35-45 enfant)",
+    "pao2": "PaO₂",
+    "pao2Normal": "mmHg (80-100)",
+    "pao2NormalPediatric": "mmHg (60-90 nouveau-né, 80-100 enfant)",
+    "hco3": "HCO₃⁻",
+    "hco3Normal": "mEq/L (22-26)",
+    "hco3NormalPediatric": "mEq/L (16-24 nouveau-né, 20-26 enfant)",
+    "sao2": "SaO₂",
+    "sao2Normal": "% (>95)",
+    "be": "Excès de base",
+    "beNormal": "mEq/L (-2 à +2)"
+  },
+  "lab": {
+    "title": "Laboratoire",
+    "hemoglobin": "Hémoglobine",
+    "hbNormal": "g/dL (H:13.5-17.5, F:12.0-16.0)",
+    "hematocrit": "Hématocrite",
+    "hctUnit": "%",
+    "creatinine": "Créatinine",
+    "creatinineUnit": "mg/dL",
+    "bun": "Urée (BUN)",
+    "bunUnit": "mg/dL",
+    "ast": "AST",
+    "astUnit": "U/L",
+    "alt": "ALT",
+    "altUnit": "U/L",
+    "albumin": "Albumine",
+    "albuminNormal": "g/dL (3.5-5.0)",
+    "lactate": "Lactate",
+    "lactateNormal": "mmol/L (<2.0)"
+  },
+  "comorbidities": {
+    "title": "Comorbidités et conditions",
+    "copd": "BPCO",
+    "asthma": "Asthme",
+    "ards": "SDRA",
+    "chf": "Insuffisance cardiaque",
+    "ckd": "Insuffisance rénale chronique",
+    "cirrhosis": "Cirrhose hépatique",
+    "diabetes": "Diabète",
+    "immunosuppression": "Immunosuppression",
+    "neuromuscular": "Maladie neuromusculaire",
+    "obesity": "Obésité (IMC >30)",
+    "pregnancy": "Grossesse",
+    "smoking": "Tabagisme"
+  },
+  "lung": {
+    "title": "État pulmonaire",
+    "pfRatio": "Rapport PaO₂/FiO₂",
+    "pfRatioUnit": "mmHg",
+    "peep": "PEP (le cas échéant)",
+    "peepUnit": "cmH₂O",
+    "allergy": "Allergies connues",
+    "allergyPlaceholder": "Laissez vide si aucune",
+    "pneumonia": "Pneumonie",
+    "pulmonaryEdema": "Œdème pulmonaire",
+    "pneumothorax": "Pneumothorax",
+    "pleuralEffusion": "Épanchement pleural",
+    "atelectasis": "Atélectasie"
+  },
+  "buttons": {
+    "analyzeNew": "Obtenir une analyse complète et des recommandations",
+    "analyzeWeaning": "Obtenir une analyse de sevrage et des recommandations",
+    "evaluateSBT": "Évaluer le résultat du SBT",
+    "openSBTSimulator": "Ouvrir le simulateur interactif SBT"
+  },
+  "weaning": {
+    "paramsTitle": "Paramètres de sevrage",
+    "ventDay": "Jour de ventilation",
+    "ventDayUnit": "jours",
+    "currentMode": "Mode actuel",
+    "modes": {
+      "simv": "VACI",
+      "acv": "VAC",
+      "pcv": "VPC",
+      "psv": "AI",
+      "cpap": "CPAP",
+      "bipap": "BiPAP",
+      "aprv": "APRV"
+    },
+    "fio2": "FiO₂",
+    "fio2Unit": "%",
+    "peep": "PEP",
+    "peepUnit": "cmH₂O",
+    "ps": "Aide Inspiratoire (AI)",
+    "psUnit": "cmH₂O",
+    "respRate": "Fréquence respiratoire",
+    "respRateUnit": "/min",
+    "spontVt": "VT spontané",
+    "spontVtUnit": "ml",
+    "rsbi": "RSBI (Index de respiration rapide et superficielle)",
+    "rsbiNormal": "resp/L/min (<105)",
+    "rsbiNormalPediatric": "resp/L/min (<8-12 pédiatrique)",
+    "criteriaTitle": "Critères de sevrage",
+    "criteria": {
+      "stable": "Stabilité hémodynamique",
+      "fever": "Apyrétique (<38°C)",
+      "infection": "Contrôle de l'infection",
+      "secret": "Bonne gestion des sécrétions",
+      "cough": "Réflexe de toux fort",
+      "gag": "Réflexe nauséeux présent",
+      "conscious": "Alerte et coopératif",
+      "acidosis": "Pas d'acidose (pH >7.35)",
+      "lactate": "Lactate normal (<2)",
+      "sedation": "Sédation réduite"
+    },
+    "akgTitle": "Derniers GSA (Sevrage)",
+    "complicationsTitle": "Complications actuelles",
+    "complications": {
+      "vap": "PAVM",
+      "barotrauma": "Barotraumatisme",
+      "delirium": "Délirium",
+      "weakness": "Faiblesse acquise en réanimation",
+      "tracheal": "Lésion trachéale",
+      "sepsis": "Sepsis/Choc septique"
+    }
+  },
+  "sbtGuide": {
+    "title": "Guide SBT (Épreuve de respiration spontanée)",
+    "subtitle": "Épreuve de respiration spontanée - Évaluation avant sevrage de la ventilation mécanique",
+    "comparisonTitle": "Comparaison des méthodes SBT",
+    "comparisonHeaders": {
+      "method": "Méthode",
+      "description": "Description",
+      "adultParams": "Paramètres adultes",
+      "pediatricParams": "Paramètres pédiatriques",
+      "difficulty": "Difficulté"
+    },
+    "methods": {
+      "ttube": {
+        "name": "Tube en T",
+        "description": "Déconnexion complète du ventilateur avec oxygène humidifié",
+        "adultParams": "Débit O₂ : 10-15 L/min",
+        "pediatricParams": "Débit O₂ : 1-2 L/kg/min",
+        "difficulty": "Élevée",
+        "shortDesc": "Respiration spontanée complète\nO₂ humidifié"
+      },
+      "ps": {
+        "name": "Faible aide inspiratoire (AI)",
+        "description": "Aide pour compenser la résistance de la sonde d'intubation",
+        "adultParams": "AI : 5-8 cmH₂O\nPEP : 5 cmH₂O",
+        "pediatricParams": "AI : 5-8 cmH₂O\nPEP : 3-5 cmH₂O",
+        "difficulty": "Faible",
+        "shortDesc": "AI : 5-8 cmH₂O\nPEP : 5 cmH₂O"
+      },
+      "cpap": {
+        "name": "CPAP",
+        "description": "Pression positive continue des voies aériennes",
+        "adultParams": "CPAP : 5 cmH₂O",
+        "pediatricParams": "CPAP : 3-5 cmH₂O",
+        "difficulty": "Moyenne",
+        "shortDesc": "CPAP : 5 cmH₂O\nRésistance de la sonde non compensée"
+      },
+      "atc": {
+        "name": "ATC (Compensation automatique de tube)",
+        "description": "Compensation automatique de la résistance du tube",
+        "adultParams": "ATC : 100%\nPEP : 5 cmH₂O",
+        "pediatricParams": "ATC : 100%\nPEP : 3-5 cmH₂O",
+        "difficulty": "Faible",
+        "shortDesc": "ATC : 100%\nPEP : 5 cmH₂O"
+      }
+    },
+    "evidenceNote": "Recommandation fondée sur des preuves : Selon la méta-analyse JAMA Network Open de 2024, les SBT réalisés avec une AI (5-8 cmH₂O) permettent d'obtenir 7 % d'extubations réussies en plus par rapport au tube en T (RR : 1.07, IC 95 % : 1.04-1.10) sans augmenter le risque de réintubation. L'ATC+CPAP a montré un taux de réussite d'extubation plus élevé que l'AI (RR : 1.10, IC 95 % : 1.00-1.21).",
+    "successTitle": "Critères de réussite du SBT",
+    "adultCriteriaTitle": "Critères adultes (30-120 min)",
+    "adultCriteria": [
+      "SpO₂ > 90% (ou PaO₂ > 60 mmHg)",
+      "Augmentation de la PaCO₂ < 10 mmHg ou pH > 7.32",
+      "Fréquence respiratoire < 35/min",
+      "RSBI (f/VT) < 105",
+      "Fréquence cardiaque < 140 ou augmentation < 20%",
+      "PA systolique : 90-180 mmHg",
+      "État de conscience stable",
+      "Absence de sueurs, dyspnée ou tirage"
+    ],
+    "pediatricCriteriaTitle": "Critères pédiatriques (30-60 min)",
+    "pediatricCriteria": [
+      "SpO₂ > 92%",
+      "Fréquence respiratoire appropriée à l'âge (généralement < 50/min)",
+      "RSBI : < 8-10 (nouveau-né), < 10-12 (enfant)",
+      "Augmentation de la fréquence cardiaque < 20%",
+      "Stabilité hémodynamique",
+      "Absence de tirage costal",
+      "Absence d'agitation ou de sueurs"
+    ],
+    "failureTitle": "Signes d'échec du SBT",
+    "immediateStopTitle": "Critères d'arrêt immédiat :",
+    "immediateStopCriteria": [
+      "Chute de la SpO₂ < 90% (adulte) / < 92% (pédiatrique)",
+      "Augmentation de la PaCO₂ > 10 mmHg ou pH < 7.32",
+      "Fréquence respiratoire > 35/min (adulte) ou élevée pour l'âge",
+      "Fréquence cardiaque > 140 ou augmentation < 20%",
+      "PA systolique > 180 ou < 90 mmHg",
+      "Agitation, sueurs profuses",
+      "Tirage costal (pédiatrique)",
+      "Altération de la conscience"
+    ],
+    "afterFailureTitle": "⚠️ Après un échec :",
+    "afterFailureCriteria": [
+      "Retour à l'assistance ventilatoire",
+      "Réévaluation après 24 heures",
+      "Rechercher la cause de l'échec (sécrétions, bronchospasme, faiblesse des muscles respiratoires)",
+      "Minimisation de la sédation, optimisation de la nutrition"
+    ],
+    "flowTitle": "Organigramme du processus SBT",
+    "flowSteps": [
+      {
+        "title": "Préparation",
+        "description": "Vérification des critères de sevrage\nRéduction de la sédation\nPréoxygénation"
+      },
+      {
+        "title": "Sélection de la méthode",
+        "description": "AI 5-8 cmH₂O (recommandé)\nou Tube en T\nou ATC+CPAP"
+      },
+      {
+        "title": "Démarrer le SBT",
+        "description": "30 min (minimum)\nAdulte : 30-120 min\nPédiatrique : 30-60 min"
+      },
+      {
+        "title": "Évaluation",
+        "description": "Clinique + GSA\nRéussite/Échec\nDécision : Extubation ?"
+      },
+      {
+        "title": "Résultat",
+        "description": "Réussite → Extubation\nÉchec → Réessayer après 24h\nEnvisager la prophylaxie VNI"
+      }
+    ]
+  },
+  "sbtSimulator": {
+    "title": "Simulateur SBT",
+    "patientPopulation": "Population de patients :",
+    "adultLabel": "Adulte",
+    "pediatricLabel": "Pédiatrique",
+    "methodSelectTitle": "1. Sélectionner la méthode SBT",
+    "difficultyLabels": {
+      "easy": "Facile",
+      "medium": "Moyen",
+      "hard": "Difficile"
+    },
+    "paramsTitle": "2. Paramètres SBT",
+    "age": "Âge",
+    "weight": "Poids (kg)",
+    "spo2Start": "SpO₂ de départ (%)",
+    "respRate": "Fréquence respiratoire (/min)",
+    "checklistTitle": "Liste de contrôle de démarrage SBT",
+    "checklist": {
+      "stable": "Stabilité hémodynamique",
+      "fio2": "FiO₂ ≤ 40-50%",
+      "peep": "PEP ≤ 5-8 cmH₂O",
+      "cough": "Réflexe de toux fort",
+      "gag": "Réflexe nauséeux présent",
+      "conscious": "Alerte et coopératif",
+      "secret": "Gestion adéquate des sécrétions",
+      "acidosis": "Pas d'acidose (pH > 7.35)"
+    },
+    "timerTitle": "Durée du SBT",
+    "timerStart": "Démarrer",
+    "timerPause": "Pause",
+    "timerReset": "Réinitialiser",
+    "recommendedDurationAdult": "30-120 min (Adulte)",
+    "recommendedDurationPediatric": "30-60 min (Pédiatrique)",
+    "recommendedDurationLabel": "Durée recommandée :",
+    "launchButton": "Démarrer le simulateur SBT"
+  },
+  "results": {
+    "riskFactorsTitle": "Facteurs de risque",
+    "lowRisk": "Risque faible",
+    "mediumRisk": "Risque moyen",
+    "highRisk": "Risque élevé",
+    "idealWeight": "Poids idéal",
+    "bmi": "IMC",
+    "bsa": "SC",
+    "eGFR": "DFGe",
+    "firstChoice": "Premier choix",
+    "alternative": "Alternative",
+    "recommendedModes": "Modes recommandés",
+    "invasive": "Ventilation mécanique invasive",
+    "niv": "Ventilation non invasive",
+    "conservative": "Traitement conservateur",
+    "weaningReady": "Prêt pour le sevrage - Le SBT peut commencer",
+    "weaningCaution": "Sevrage prudent - Préparation au SBT",
+    "weaningWait": "Sevrage trop précoce - Attendre pour le SBT",
+    "weanScore": "Score de sevrage",
+    "criteriaMetLabel": "Critères remplis",
+    "ventilatorDay": "Jour de ventilation",
+    "parametersTitle": "Paramètres de sevrage",
+    "suggestionsTitle": "Recommandations",
+    "sbtReadyTitle": "Prêt à démarrer le SBT",
+    "sbtReadyDescription": "Le patient est apte au SBT. Durée recommandée :",
+    "sbtReadyNote": "La méthode AI 5-8 cmH₂O ou le tube en T peut être utilisé(e).",
+    "sbtSuccess": "SBT RÉUSSI",
+    "sbtFail": "ÉCHEC DU SBT / ARRÊT PRÉMATURÉ REQUIS",
+    "successCriteriaMet": "Critères de réussite remplis :",
+    "detectedIssues": "Problèmes détectés :",
+    "sbtSuccessRecommendations": [
+      "L'extubation peut être envisagée",
+      "La fonction de déglutition et le réflexe de toux doivent être vérifiés",
+      "Une prophylaxie par VNI peut être envisagée pour les patients à haut risque",
+      "Une surveillance étroite après l'extubation doit être planifiée"
+    ],
+    "sbtFailRecommendations": [
+      "Retourner à l'assistance ventilatoire",
+      "Traiter la cause sous-jacente (sécrétions, bronchospasme, etc.)",
+      "Minimisation de la sédation et optimisation de la nutrition",
+      "Planifier une réévaluation du SBT après 24 heures",
+      "Exercices de renforcement et rééducation"
+    ],
+    "methodUsed": "Méthode utilisée :",
+    "duration": "Durée :",
+    "population": "Population :",
+    "sbtRecommendationsTitle": "Recommandations :",
+    "sbtActionsTitle": "Actions requises :"
+  },
+  "riskFactors": {
+    "advancedAge": "Âge avancé (>65)",
+    "veryAdvancedAge": "Âge très avancé (>80)",
+    "newborn": "Nouveau-né (haut risque)",
+    "infant": "Nourrisson",
+    "renalFailure": "Insuffisance rénale (DFGe <60)",
+    "highCreatininePediatric": "Créatinine élevée (pédiatrique)",
+    "hypoalbuminemia": "Hypoalbuminémie",
+    "liverEnzymeElevation": "Élévation des enzymes hépatiques",
+    "anemia": "Anémie",
+    "severeAcidosis": "Acidose sévère",
+    "severeLacticAcidosis": "Acidose lactique sévère",
+    "mildLacticAcidosis": "Acidose lactique légère",
+    "ckd": "IRC",
+    "dm": "Diabète",
+    "obesityRisk": "Obésité"
+  },
+  "abgInterpretation": {
+    "respiratoryAcidosis": "Acidose respiratoire",
+    "respiratoryAlkalosis": "Alcalose respiratoire",
+    "metabolicAcidosis": "Acidose métabolique",
+    "metabolicAlkalosis": "Alcalose métabolique",
+    "severeHypoxemia": "Hypoxémie sévère",
+    "hypoxemia": "Hypoxémie"
+  },
+  "ventModes": {
+    "pcvVg": "PCV-VG (Volume garanti)",
+    "prvcPcvVg": "PRVC/PCV-VG",
+    "pcv": "VPC",
+    "bipapST": "BiPAP S/T",
+    "cpapBipapPediatric": "CPAP/BiPAP (Masque pédiatrique)",
+    "hfnc": "Lunettes nasales à haut débit (Optiflow)",
+    "nasalCannula": "Canule nasale/Tente O2",
+    "pcvLongExhale": "VPC + Expiration prolongée",
+    "lungProtective": "Stratégie de protection pulmonaire",
+    "pressureControlled": "Ventilation en pression contrôlée",
+    "niv": "Ventilation non invasive",
+    "conservativeO2": "Assistance en oxygène conservatrice",
+    "obstructionManagement": "Gestion de l'obstruction",
+    "bronchodilatorRequired": "Requis"
+  },
+  "weaningRecommendations": {
+    "startSBT": "Démarrer le SBT",
+    "methodPS": "Méthode : AI 5-8 cmH₂O (recommandé) ou Tube en T",
+    "extubationEval": "envisager l'extubation",
+    "swallowCheck": "La fonction de déglutition et le réflexe de toux doivent être vérifiés",
+    "nivProphylaxis": "Une prophylaxie par VNI peut être envisagée pour les patients à haut risque",
+    "dailySBT": "Des essais quotidiens de SBT doivent être planifiés",
+    "psvReduction": "Réduction progressive de l'AI (2-3 cmH₂O par jour)",
+    "rehabilitation": "Exercices de renforcement et rééducation",
+    "sedationMinimization": "Minimisation de la sédation",
+    "underlyingCause": "Traiter la cause sous-jacente (infection, œdème, etc.)",
+    "dailyAwakening": "Minimisation de la sédation (protocole d'éveil quotidien)",
+    "nutritionOptimization": "Optimisation de la nutrition (cible : 25-30 kcal/kg/jour)",
+    "respiratoryStrengthening": "Renforcement des muscles respiratoires",
+    "prolongedMV": "⚠️ VM prolongée - Envisager la trachéostomie",
+    "pediatricConsult": "consultation pédiatrique requise"
+  },
+  "validation": {
+    "requiredFields": "Veuillez saisir les valeurs d'âge, de poids et de taille !",
+    "requiredABG": "Veuillez saisir les valeurs de pH, PaCO₂ et PaO₂ !",
+    "requiredAgeWeight": "Veuillez saisir les valeurs d'âge et de poids !",
+    "requiredVentDay": "Veuillez saisir le jour de ventilation !"
+  },
+  "language": {
+    "tr": "Türkçe",
+    "en": "English",
+    "fr": "Français",
+    "es": "Español",
+    "de": "Deutsch",
+    "it": "Italiano",
+    "ru": "Русский"
+  }
+}

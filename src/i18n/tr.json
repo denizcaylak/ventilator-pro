@@ -438,6 +438,11 @@
   },
   "language": {
     "tr": "Türkçe",
-    "en": "English"
+    "en": "English",
+    "fr": "Français",
+    "es": "Español",
+    "de": "Deutsch",
+    "it": "Italiano",
+    "ru": "Русский"
   }
 }

@@ -26,7 +26,7 @@ export default function App() {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="glass-header border-b border-slate-100/50">
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 h-20 sm:h-24 md:h-32 flex items-center justify-between">
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 py-4 sm:py-6 flex items-center justify-between">
           <div className="flex items-center gap-5">
             <div className="bg-secondary/10 p-4 rounded-2xl text-secondary shadow-inner">
               <Activity className="w-10 h-10" />
