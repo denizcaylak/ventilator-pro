@@ -44,4 +44,4 @@ The output will be in the `dist/` directory.
 This application is for **educational and decision support purposes only**. All clinical decisions must be made by a qualified medical professional.
 
 ---
-Created by **Dr. Feridun Karadağ**
+Created by **Deniz Çaylak** and **Dr. Feridun Karadağ**
